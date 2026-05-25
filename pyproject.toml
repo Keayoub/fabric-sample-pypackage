@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sample-fabric-package"
+version = "0.1.0"
+authors = [
+    {name = "Your Name", email = "your.email@example.com"},
+]
+description = "A sample Python package for Microsoft Fabric runtime"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+keywords = ["fabric", "microsoft", "sample", "package"]
+dependencies = [
+    "azure-identity>=1.17.1",
+    "azure-storage-blob>=12.22.0",
+]
+dynamic = ["entry-points"]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/sample-fabric-package"
+Repository = "https://github.com/yourusername/sample-fabric-package.git"
+Issues = "https://github.com/yourusername/sample-fabric-package/issues"
+
+[project.scripts]
+sample-fabric = "sample_fabric.main:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["sample_fabric*"]
+
+[tool.setuptools.package-data]
+sample_fabric = ["*.txt", "*.md"]

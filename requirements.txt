@@ -1,0 +1,4 @@
+# Dependencies for OneLake ADLS Gen2/Blob API access via Azure AD
+azure-identity>=1.17.1
+azure-storage-blob>=12.22.0
+python-dotenv>=1.0.0
