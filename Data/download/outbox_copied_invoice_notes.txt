@@ -1,3 +1,0 @@
-Invoice: INV-10021
-Amount: 1250.75
-Currency: USD

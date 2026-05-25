@@ -1,3 +1,0 @@
-Customer: Contoso
-Segment: Enterprise
-Status: Active
