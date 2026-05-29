@@ -6,7 +6,7 @@ It is written for newcomers and follows a **minimal-privileges** approach.
 
 ## 1) Why this works
 
-OneLake exposes endpoints compatible with Azure Storage APIs. In Python, you can authenticate with Microsoft Entra ID and use Azure SDK clients (for example, `azure-storage-blob`) against the OneLake DFS/Blob endpoints.
+OneLake exposes endpoints compatible with Azure Storage APIs. In Python, you can authenticate with Microsoft Entra ID and use Azure SDK clients (for example, `azure-storage-blob`) against the OneLake endpoint.
 
 In this repository, `OneLakeScopedBlobIO` is the helper that wraps this flow and adds folder scoping in code.
 
@@ -117,5 +117,13 @@ For an end-to-end sample script, see:
 2. Confirm folder-level access in OneLake.
 3. Run `python test_onelake_sp.py`.
 4. Validate read/write/list behavior in your scoped folders.
+
+## 10) References
+
+- [Access OneLake with Python](https://learn.microsoft.com/en-us/fabric/onelake/onelake-access-python)
+- [How do I connect to OneLake?](https://learn.microsoft.com/en-us/fabric/onelake/onelake-access-api)
+- [Microsoft OneLake documentation](https://learn.microsoft.com/en-us/fabric/onelake/)
+- [Authentication in Python with Azure Identity](https://learn.microsoft.com/en-us/azure/developer/python/sdk/identity/)
+- [Azure Storage Python SDK documentation](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-python)
 
 This approach keeps OneLake access aligned with standard Azure SDK patterns while preserving least-privilege boundaries.
